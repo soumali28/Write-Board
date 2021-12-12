@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a43ef1b1c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="blackboard.png" type="image/x-icon">
+    <title>Write-Board</title>
+</head>
+<body>
+    <div class="tools">
+       
+        <div class="arrows">
+            <input type="button" name="undo-redo" >
+            <label for="undo">
+                <i class="fas fa-arrow-circle-left icons" onclick="undo()"></i>
+            </label>
+         
+            <input type="button" name="undo-redo">
+            <label for="redo">
+                <i class="fas fa-times-circle icons" onclick="clearCanvas()"></i>
+            </label>
+        </div>
+        
+        <div class="size">
+            <input type="text" class="size-box" value="5" onchange="getSize()">  
+        </div>
+        <div class="write">
+            
+             
+            <div class="painting-tools">
+                <input id="pen" class="radio" type="radio" name="pen-type">
+                <label for="pen-pencil">
+                    <i class="fas fa-pencil-alt icons pencil "></i>
+                </label>
+             
+                <input  id="eraser"class="radio" type="radio" name="pen-type">
+                <label for="pen-erase">
+                    <i class="fas fa-eraser icons eraser "></i>
+                </label>
+        
+            </div>
+        </div>
+        
+       <div class="colorpicker">
+            <input class="picker" value ="#000" type="color" value="#ff0000" onchange="getColour()">
+       </div>
+    </div>
+    <canvas id="canvas" class="myCanvas"></canvas>
+
+    <script src="index.js"></script>
+</body>
+</html> 

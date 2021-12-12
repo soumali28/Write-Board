@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    
+}
+
+.tools{ 
+ 
+    background-color: rgb(238, 223, 89);
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 3px 5px rgb(218, 212, 212);
+    margin: 30px 350px;
+}
+.arrows{
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    left: 6%;
+    top: 10px;
+}
+.arrows input{
+    display: none;
+}
+
+.write{
+    position: relative;
+    left: 40%;
+    bottom: 55px;
+    margin: 0 12px;
+    font-size: 1.6rem;
+}
+
+.painting-tools label{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.painting-tools input:checked+label{
+    color: rgb(15, 102, 59);
+}
+.size{
+    position: relative;
+    left: 33%;
+    bottom: 26%;
+}
+.size-box{
+    width: 30px;
+    padding: 1%;
+    position: relative;
+    bottom: 0.45rem;
+    margin-right: 12px;
+    right:  15px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+.icons{
+    padding: 2px 5px;
+    margin: 2px 12px;
+}
+
+.picker{
+    position: relative; 
+    left: 75%;
+    bottom: 88px;
+    margin: 2px 15px;       
+    cursor: pointer;
+    height: 30px;
+    width: 6rem;
+    border: none;
+}
+
+
