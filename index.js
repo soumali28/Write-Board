@@ -93,6 +93,10 @@ canvas.addEventListener("mouseup" , stop);
 canvas.addEventListener("mouseout" , out);
 canvas.addEventListener("mousemove", draw);
 
+// for mobile and tablet
+canvas.addEventListener("touchstart", start);
+canvas.addEventListener("touchmove", draw);
+canvas.addEventListener("touchend", stop);
 
 var mode="pen";
 document.querySelector("#pen").addEventListener("click" , function(){mode = "pen"});
@@ -126,118 +130,7 @@ function undo() {
 
 
 
-// const canvas = document.querySelector(".myCanvas")
 
-//resizing the canvas
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-
-// const ctx = canvas.getContext("2d");
-// ctx.fillStyle = "white";
-// ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-
-
-// //tools and its uses
-
-// //drawing part
-// function drawing(){
-
-//     var pencil = document.querySelector(".pencil");
-
-//     pencil.addEventListener("click", draw);
- 
-//     var paint = false;
-//     function startDraw(){
-//         paint = true;
-//         ctx.beginPath();
-//     }
-//     function stopDraw(){
-//         paint = false;
-//         ctx.closePath();
-//     }
-//     function draw(e){
-//         if(paint){
-           
-//             ctx.strokeStyle = getColour();
-//             ctx.lineWidth = getSize();
-//             ctx.lineCap = "round";
-//             ctx.globalCompositeOperation = 'source-over';
-//             ctx.lineTo(e.clientX , e.clientY);
-//             ctx.stroke();
-//         }
-//         e.preventDefault();
-//     } 
-//     canvas.addEventListener("mousedown" , startDraw);
-//     canvas.addEventListener("mouseup" , stopDraw);
-//     canvas.addEventListener("mousemove", draw);
-// }
-
-
-// //erase part
-// var eraser = document.querySelector(".eraser");
-// function erasing(){
-//     eraser.addEventListener("click" , erase);
-
-//     var remove = false;
-//     function startErase(){
-//         remove = true;
-//         ctx.beginPath();
-//     }
-    
-//     function stopErase(){
-//         remove = false;
-//         ctx.closePath();
-//     }
-
-//     function erase(e){
-//         if(remove){
-//             ctx.globalCompositeOperation = 'destination-out';
-//             ctx.arc(lastX,lastY,8,0,Math.PI*2,false);
-//             ctx.fill();
-//         }
-       
-//     }
-    
-//     canvas.addEventListener("mousedown" , startErase);
-//     canvas.addEventListener("mouseup" , stopErase);
-//     canvas.addEventListener("mousemove", erase);
-// }
-
-
-// // spray function
-
-// var spray = document.querySelector(".spray");
-// function spray(){
-//     spray.addEventListener("click" , spray);
-
-//     var bottle = false;
-//     function startSpray(){
-//         bottle = true;
-//         ctx.beginPath();
-//     }
-    
-//     function stopSpray(){
-//         bottle = false;
-//         ctx.closePath();
-//     }
-//     function spray(e){
-//         if(bottle){
-//             ctx.strokeStyle = getColour();
-//             ctx.lineWidth = getSize();
-//             ctx.lineCap = "round";
-//             ctx.moveTo(e.clientX , e.clientY)
-//             ctx.lineTo(e.clientX , e.clientY);
-//             ctx.stroke();
-//         }
-//         e.preventDefault();
-      
-//     }
-    
-//     canvas.addEventListener("mousedown" , startSpray);
-//     canvas.addEventListener("mouseup" , stopSpray);
-//     canvas.addEventListener("mousemove", spray);
-// }
 
 
 
